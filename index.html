@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nostra Home</title>
+
+    <!-- Tailwind CSS CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!--Font Aweson CDN Link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+
+        html{
+            scroll-behavior: smooth;
+        }
+
+        #slider-container {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        #slider-container img {
+            width: 100%;
+            object-fit: cover;
+        }
+    </style>
+
+    <script src="index.js" defer></script>
+</head>
+
+<body>
+    <!-- Sign Up Offer Bar -->
+    <section id="sign-Up-Offer-Bar"
+        class="bg-slate-900 text-white text-sm md:text-base px-4 py-2 flex justify-center items-center gap-32">
+
+        <p>
+            Sign Up and <span class="font-bold text-white">GET 20% OFF</span> for your first Order
+        </p>
+
+        <button id="close-offer-bar" class="text-white font-bold text-lg ">✕</button>
+    </section>
+
+    <!-- Navbar -->
+    <section id="navbar" class="flex justify-between items-center p-4 bg-white ">
+
+        <div class="text-slate-900 text-2xl font-bold">
+            <h1>Nostra</h1>
+        </div>
+
+        <div>
+            <svg id="nav-Icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24
+         24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6 md:hidden cursor-pointer">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+        </div>
+
+        <div class="hidden md:flex gap-10 lg:gap-16 text-slate-900 md:gap-5 ">
+            <a href="index.html">Home</a>
+            <a href="#new-arrivals" class="hover:underline">New Arrival</a>
+            <a href="#most-Wanted" class="hover:underline">Most Wanted</a>
+            <a href="collections.html" class="hover:underline">Collections</a>
+            <a href="" class="hover:underline">Contact Us</a>
+        </div>
+    </section>
+
+    <!-- Side Navbar -->
+    <section id="sideNav" class="fixed w-1/3 top-0 left-0 h-screen transition-all duration-700 z-50" style="left:-50%;">
+        <nav class="bg-gray-300 p-3 h-full">
+            <!-- Close Button -->
+            <div class="text-right ">
+                <p id="closeBtn" class="inline cursor-pointer font-bold text-slate-950 hover:text-red-800">X</p>
+            </div>
+
+            <ul class="gap-5 text-gray-600 flex flex-col items-start px-2 md:hidden lg:hidden">
+                <li><a class="hover:underline hover:text-black" href="index.html">Home</a></li>
+                <li><a class="hover:underline hover:text-black" href="#new-arrivals">New Arrivals</a></li>
+                <li><a class="hover:underline hover:text-black" href="#most-Wanted">Most Wanted</a></li>
+                <li><a class="hover:underline hover:text-black" href="collections.html">Collections</a></li>
+                <li><a class="hover:underline hover:text-black" href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </section>
+
+    <!-- Recommended Bannar -->
+    <section id="recommended-banner" class="px-4">
+        <div class="relative w-full  mx-auto rounded overflow-hidden group">
+
+            <!-- Background Image -->
+            <div id="slider-container" class="flex transition-transform w-full h-full duration-500 ease-in-out ">
+                <img id="banner-img" class="rounded" src="./images/merged_clothing_banner_2.jpg" alt="sale-img">
+                <img id="banner-img" class="rounded" src="./images/merged_clothing_banner_2.jpg" alt="sale-img">
+                <img id="banner-img" class="rounded" src="./images/merged_clothing_banner_2.jpg" alt="sale-img">
+            </div>
+
+            <!-- Overlay Content -->
+            <div id="overlay"
+                class="inset-0 bg-black bg-opacity-40 absolute flex flex-col gap-1 justify-center items-center text-white text-center">
+                <h1 class="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold leading-tight">Level up your style
+                    with our</h1>
+                <p class="text-base sm:text-lg md:text-xl font-semibold">Summer Collection</p>
+                <button
+                    class="border border-transparent p-1 md:p-2 bg-gray-100 rounded text-black hover:bg-gray-300 text-xs">Shop
+                    Now &rarr;</button>
+            </div>
+
+            <!-- Arrows (show on hover) -->
+            <button id="prevBtn"
+                class="absolute top-1/2 left-3 transform -translate-y-1/2 bg-black bg-opacity-50 text-white px-3 py-1 text-xl rounded hidden group-hover:block">
+                &lt;
+            </button>
+            <button id="nextBtn"
+                class="absolute top-1/2 right-3 transform -translate-y-1/2 bg-black bg-opacity-50 text-white px-3 py-1 text-xl rounded hidden group-hover:block">
+                &gt;
+            </button>
+        </div>
+
+    </section>
+
+    <!-- Brands  -->
+    <section id="brands" class="px-4">
+        <h2 class="text-slate-900 text-2xl font-bold">Brands</h2>
+        <div class="brand-container grid grid-flow-col items-center justify-between gap-4 text-center mt-4">
+            <div>
+                <img src="./images/behance.png" alt="" class="mx-auto h-5 object-contain md:h-7">
+                <p class="text-xs md:text-sm">Behance</p>
+            </div>
+            <div>
+                <img src="./images/adidas.png" alt="" class="mx-auto h-5 object-contain md:h-7">
+                <p class="text-xs md:text-sm">Adidas</p>
+            </div>
+            <div>
+                <img src="./images/basic-seeklogo.png" alt="" class="mx-auto h-5 object-contain md:h-6">
+                <p class="text-xs md:text-sm mt-1">Basic</p>
+            </div>
+            <div>
+                <img src="./images/leaves.png" alt="" class="mx-auto h-5 object-contain md:h-7">
+                <p class="text-xs md:text-sm">Leaves</p>
+            </div>
+            <div>
+                <img src="./images/twitch.png" alt="" class="mx-auto h-5 object-contain md:h-7">
+                <p class="text-xs md:text-sm">Twitch</p>
+            </div>
+            <div>
+                <img src="./images/simple.png" alt="" class="mx-auto h-5 object-contain md:h-7">
+                <p class="text-xs ">Simple</p>
+            </div>
+            <div>
+                <img src="./images/puma.png" alt="" class="mx-auto h-5 object-contain md:h-7">
+                <p class="text-xs md:text-sm">Puma</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services  -->
+    <section id="services" class="px-4 pt-5 lg:p-8">
+        <div id="services-Container_1" class="grid grid-cols-[1.5fr_2.5fr] gap-7 lg:grid-cols-2">
+            <div>
+                <h3 class="font-bold text-sm md:text-lg lg:text-2xl">We Provide Best Customer Experiences</h3>
+            </div>
+            <div>
+                <p class="text-[10px] md:text-sm lg:text-lg">|| We ensure that our customer have the best shopping
+                    experience</p>
+            </div>
+        </div>
+
+        <!-- sercice Card -->
+        <div id="service-card-cantainer" class="service-card-cantainer grid grid-cols-4 gap-2 pt-4 lg:mt-6">
+            <div class="border border-transparent bg-slate-200 p-2 rounded-lg">
+                <i class="fa-regular fa-circle-check" style="color: #00040a;"></i>
+                <h4 class="text-[8px] font-medium md:text-xs lg:text-sm">Original Products</h4>
+                <p class="text-[6px] md:text-[8px] lg:text-[10px]">"Experience genuine craftsmanship with every original
+                    product made for lasting
+                    performance and style."</p>
+            </div>
+
+            <div class="border border-transparent bg-slate-200 p-2 rounded-lg">
+                <i class="fa-regular fa-face-smile" style="color: #000000;"></i>
+                <h4 class="text-[8px] font-medium md:text-xs lg:text-sm">Satisfaction Guarantee</h4>
+                <p class="text-[6px] md:text-[8px] lg:text-[10px]">"Not happy? We’ll make it right with an easy return
+                    and full refund."</p>
+            </div>
+
+            <div class="border border-transparent bg-slate-200 p-2 rounded-lg">
+                <i class="fas fa-tags text-black-600"></i>
+                <h4 class="text-[8px] font-medium md:text-xs lg:text-sm">New Arrival Everyday</h4>
+                <p class="text-[6px] md:text-[8px] lg:text-[10px]">"Stay ahead of trends with exciting new arrivals
+                    dropping every single day."</p>
+            </div>
+
+            <div class="border border-transparent bg-slate-200 p-2 rounded-lg">
+                <i class="fa-solid fa-truck-fast" style="color: #000000;"></i>
+                <h4 class="text-[8px] font-medium md:text-xs lg:text-sm">Fast & Free Shipping</h4>
+                <p class="text-[6px] md:text-[8px] lg:text-[10px]">"Shop now, ship free — speedy delivery straight to
+                    your doorstep, every time."</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- New Arrivals -->
+    <section id="new-arrivals" class="p-4 ">
+        <h1 class="font-bold text-2xl" id>New Arrivals</h1>
+
+        <div class="flex gap-3 justify-between pt-3">
+
+            <div class="relative rounded-md overflow-hidden">
+                <!-- Image -->
+                <img class="w-full h-full object-cover" src="./images/NewArraivals/3.png" alt="img">
+
+                <!-- Overlay + Button on top of the image -->
+                <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center z-10">
+                    <button
+                        class="text-white text-xs py-0.5 px-1 rounded-full bg-zinc-600 hover:bg-gray-500 transition absolute top-3/4 md:text-sm md:p-1.5">
+                        Shop Now &rarr;
+                    </button>
+                </div>
+            </div>
+
+            <div class=" relative rounded-md overflow-hidden">
+                <!-- Image -->
+                <img class="w-full h-full object-cover" src="./images/NewArraivals/1.png" alt="img">
+
+                <!-- Overlay + Button on top of the image -->
+                <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center z-10">
+                    <button
+                        class="text-white text-xs py-0.5 px-1 rounded-full bg-zinc-600 hover:bg-gray-500 transition absolute top-3/4 md:text-sm md:p-1.5">
+                        Shop Now &rarr;
+                    </button>
+                </div>
+            </div>
+
+            <div class=" relative rounded-md overflow-hidden">
+                <!-- Image -->
+                <img class="w-full h-full object-cover" src="./images/NewArraivals/2.png" alt="img">
+
+                <!-- Overlay + Button on top of the image -->
+                <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center z-10">
+                    <button
+                        class="text-white text-xs py-0.5 px-1 rounded-full bg-zinc-600 hover:bg-gray-500 transition absolute top-3/4 md:text-sm md:p-1.5">
+                        Shop Now &rarr;
+                    </button>
+                </div>
+            </div>
+
+            <div class=" relative rounded-md overflow-hidden ">
+                <!-- Image -->
+                <img class="w-full h-full object-cover rounded-xl " src="./images/NewArraivals/4.png" alt="img">
+
+                <!-- Overlay + Button on top of the image -->
+                <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center z-10">
+                    <button
+                        class="text-white text-xs py-0.5 px-1 rounded-full bg-zinc-600 hover:bg-gray-500 transition absolute top-3/4 md:text-sm md:p-1.5">
+                        Shop Now &rarr;
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Most Wanted -->
+    <section id="most-Wanted" class="p-4">
+        <h1 class="font-bold text-2xl">Most Wanted</h1>
+
+        <div class="flex gap-3 justify-between pt-4">
+
+            <div class="relative rounded-md overflow-hidden">
+                <!-- Image -->
+                <img class="w-full h-full object-cover relative" src="./images/NewArraivals/3.png" alt="img">
+                <p class="text-white p-0.2 px-0.5 bg-red-700 opacity-70 absolute top-0 left-0">Sale</p>
+                <i class="fa-regular fa-heart absolute bottom-1 right-1" style="color: #d40808;"></i>
+            </div>
+
+            <div class=" relative rounded-md overflow-hidden">
+                <!-- Image -->
+                <img class="w-full h-full object-cover relative" src="./images/NewArraivals/1.png" alt="img">
+                <p class="text-white p-0.2 px-0.5 bg-red-700 opacity-70 absolute top-0 left-0">Sale</p>
+                <i class="fa-regular fa-heart absolute bottom-1 right-1" style="color: #d40808;"></i>
+            </div>
+
+            <div class=" relative rounded-md overflow-hidden">
+                <!-- Image -->
+                <img class="w-full h-full object-cover relative" src="./images/NewArraivals/2.png" alt="img">
+                <p class="text-white p-0.2 px-0.5 bg-red-700 opacity-70 absolute top-0 left-0">Sale</p>
+                <i class="fa-regular fa-heart absolute bottom-1 right-1" style="color: #d40808;"></i>
+            </div>
+
+            <div class=" relative rounded-md overflow-hidden ">
+                <!-- Image -->
+                <img class="w-full h-full object-cover rounded-xl relative " src="./images/NewArraivals/4.png"
+                    alt="img">
+                <p class="text-white p-0.2 px-0.5 bg-red-700 opacity-70 absolute top-0 left-0">Sale</p>
+                <i class="fa-regular fa-heart absolute bottom-1 right-1" style="color: #d40808;"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Offer Image -->
+    <section class="p-4">
+        <div class="bg-slate-950 grid grid-cols-2 gap-6">
+            <div class="flex items-center lg:p-7">
+                <img src="./images/OfferImage/pexels-bohlemedia-1884584.jpg" alt="">
+            </div>
+            <div class="text-white flex flex-col items-start justify-center p-4">
+                <h1 class="font-bold text-2xl md:text-3xl lg:text-4xl">Limited Offer</h1>
+                <h2 class="font-semibold lg:text-xl"> <strong>35% OFF</strong> on this for the first 30 Customers</h2>
+                <button
+                    class="px-1.5 rounded-full text-[10px] bg-slate-100 text-black text-center mt-4 md:text-sm font-semibold md:p-1.5 md:mt-9 lg:p-2 lg:text-base lg:mt-20">Shop
+                    Now
+                    &rarr;</button>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- News Section -->
+    <section>
+        <div class="p-4 flex flex-col items-center justify-center">
+            <h3 class="text-slate-950 text-xm font-bold md:text-2xl lg:text-3xl">Join our News Letter</h3>
+            <p class="text-xs md:text-sm lg:text-lg">Signup for our email newspaper to get exclusive discounts, updates,
+                and more</p>
+            <input class="border-2 w-11/12 rounded-md mt-3 border-slate-900 p-2" type="text">
+            <button class="mt-4 bg-slate-900 p-2 rounded-lg text-xs text-white lg:text-sm">Subscribe &Rarr;</button>
+        </div>
+    </section>
+
+<div id="sideNavBarOverlay" class="hidden fixed inset-0 bg-black bg-opacity-30  transition-all duration-300 pointer-events-auto z-50"></div>
+
+</body>
+
+</html>
