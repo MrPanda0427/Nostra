@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+
+    <!-- Tailwind CSS CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!--Font Aweson CDN Link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script defer src="contact.js"></script>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <section id="navbar" class="flex justify-between items-center p-4 bg-white fixed w-full shadow-md">
+
+        <div class="text-slate-900 text-2xl font-bold">
+            <h1>Nostra</h1>
+        </div>
+
+        <div>
+            <svg id="nav-Icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24
+         24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6 md:hidden cursor-pointer">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+        </div>
+
+        <div class="hidden md:flex gap-10 lg:gap-16 text-slate-900 md:gap-5 ">
+            <a href="index.html" class="hover:underline">Home</a>
+            <!-- <a href="#new-arrivals" class="hover:underline" id="newArraivalusBtn">New Arrival</a>
+            <a href="#most-Wanted" class="hover:underline">Most Wanted</a> -->
+            <a href="collections.html" class="hover:underline">Collections</a>
+            <a href="" class="hover:underline">Contact Us</a>
+        </div>
+    </section>
+
+    <!-- Side Navbar -->
+    <section id="sideNav" class="fixed w-1/3 top-0 left-0 h-screen transition-all duration-700 z-50" style="left:-50%;">
+        <nav class="bg-gray-100 p-3 h-full">
+            <!-- Close Button -->
+            <div class="text-right ">
+                <p id="closeBtn" class="inline cursor-pointer font-bold text-slate-950 hover:text-red-800">X</p>
+            </div>
+
+            <ul class="gap-5 text-gray-600 flex flex-col items-start px-2 md:hidden lg:hidden">
+                <li><a class="hover:underline font-semibold hover:text-black" href="index.html">Home</a></li>
+                <li><a class="hover:underline font-semibold hover:text-black" href="collections.html">Collections</a></li>
+                <li><a class="hover:underline font-semibold hover:text-black" href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </section>
+
+    <!-- contact section -->
+    <section class="p-4 flex justify-center">
+        <div  class="bg-slate-900 p-4 rounded-xl w-11/12 md:w-2/3 lg:w-1/2 mt-20 shadow-2xl">
+            <h1 class="text-slate-200 text-2xl font-bold">Contact Us</h1>
+            <form id="contactForm" class="mt-4">
+                <!-- Name -->
+                <div>
+                    <label class="block text-slate-100 mb-1">Name:</label>
+                    <input id="name" type="text" placeholder="Enter your name"
+                        class="w-full px-3 py-2 rounded bg-slate-100 text-black focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+
+                <!-- Email -->
+                <div class="mt-2">
+                    <label class="block text-slate-100 mb-1">Email:</label>
+                    <input id="email" type="email" placeholder="Enter your email"
+                        class="w-full px-3 py-2 rounded bg-slate-100 text-black focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+
+                <!-- Message -->
+                <div class="mt-2">
+                    <label class="block text-slate-100 mb-1">Message:</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Enter your feedback"
+                        class="w-full px-3 py-2 rounded bg-slate-100 text-black focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white font-semibold px-6 py-2 rounded mt-3">
+                    Submit
+                </button>
+            </form>
+
+        </div>
+    </section>
+
+    <!-- News Section -->
+    <section>
+        <div class="p-4 flex flex-col items-center justify-center">
+            <h3 class="text-slate-950 text-xm font-bold md:text-2xl lg:text-3xl">Join our News Letter</h3>
+            <p class="text-xs md:text-sm lg:text-lg">Signup for our email newspaper to get exclusive discounts, updates,
+                and more</p>
+            <input class="border-2 w-11/12 rounded-md mt-3 border-slate-900 p-2" type="text">
+            <button class="mt-4 bg-slate-900 p-2 rounded-lg text-xs text-white lg:text-sm">Subscribe &Rarr;</button>
+        </div>
+    </section>
+
+    <!-- footer -->
+
+    <footer class="bg-gray-900 text-white px-6 py-8">
+        <div class=" mx-auto space-y-4">
+            <!-- Logo & Description -->
+            <div>
+                <h2 class="text-2xl font-bold">Nostra</h2>
+                <p class="text-sm text-gray-300">
+                    The Standard chunk of Lorem ipsum used since the 1500s is reproduced below for those interest
+                </p>
+            </div>
+
+            <!-- Social Media Icons -->
+            <div class="flex gap-4 text-xl">
+                <a href="#" class="hover:text-blue-500"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="hover:text-blue-500"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="hover:text-blue-500"><i class="fab fa-facebook-f"></i></a>
+            </div>
+
+            <!-- Copyright -->
+            <p class="text-sm text-gray-400">@ 2025 Nostra.com</p>
+        </div>
+    </footer>
+
+    <div id="sideNavBarOverlay"
+        class="hidden fixed inset-0 bg-black bg-opacity-30  transition-all duration-300 pointer-events-auto"
+        style="z-index: 41;"></div>
+
+</body>
+
+</html>

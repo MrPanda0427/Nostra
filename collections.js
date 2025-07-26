@@ -19,14 +19,24 @@ const sideNav = document.getElementById("sideNav");
 const sideNavCloseBtn = document.getElementById("closeBtn")
 const sideNav_Icon = document.getElementById("nav-Icon")
 
+const sideNavBarOverlay = document.getElementById("sideNavBarOverlay");
+
 sideNav_Icon.addEventListener("click", function (event) {
     sideNav.style.left = "0"
+
+    sideNavBarOverlay.classList.remove("hidden")
 })
 sideNavCloseBtn.addEventListener("click", function (event) {
     sideNav.style.left = "-50%"
+
+    sideNavBarOverlay.classList.add("hidden");
 })
 
-cons
+sideNavBarOverlay.addEventListener("click", function(){
+    sideNav.style.left = "-50%"
+
+    sideNavBarOverlay.classList.add("hidden");
+})
 
 // Intersection Observer to fix navbar when offer bar scrolls out
 const observer = new IntersectionObserver(
@@ -48,3 +58,33 @@ const observer = new IntersectionObserver(
 
 observer.observe(offerBar);
 
+// fillter logic
+const allCheckBoxs = document.querySelectorAll('input[type="checkbox"]');
+const productCards = document.querySelectorAll('#productContainer > div');
+
+let selectedCategories = [];
+
+allCheckBoxs.forEach((checkbox) => {
+    checkbox.addEventListener("change", function (event) {
+        const value = event.target.value.toLowerCase();
+
+        // Add or remove from selected categories
+        if (event.target.checked) {
+            if (!selectedCategories.includes(value)) {
+                selectedCategories.push(value);
+            }
+        } else {
+            const index = selectedCategories.indexOf(value);
+            if (index > -1) {
+                selectedCategories.splice(index, 1);
+            }
+        }
+
+        // Loop through all cards and filter
+        productCards.forEach((card) => {
+            const tags = (card.dataset.tags || "").toLowerCase().split(" ");
+            const show = selectedCategories.length === 0 || selectedCategories.every(f => tags.includes(f));
+            card.style.display = show ? 'block' : 'none';
+        });
+    });
+});

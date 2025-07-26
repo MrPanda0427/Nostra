@@ -1,0 +1,56 @@
+<input type="checkbox" id="summer" name="one" value="Summer">Summer
+<input type="checkbox" id="party" name="one" value="Party">Party
+<input type="checkbox" id="winder" name="one" value="Winder">Winder
+<input type="checkbox" id="beach" name="one" value="Beach">Beach
+
+<div class="names">
+    <h1>summer blue</h1>
+    <h1>Party ware</h1>
+    <h1>Winder red</h1>
+    <h1>Beach white</h1>
+</div>
+
+
+<script>
+   
+
+    const checkBoxes = document.querySelectorAll('input[name="one"]')
+    console.log(checkBoxes)
+
+    const productName = document.querySelectorAll(".names h1")
+    console.log(productName)
+
+    let selectedValue = [];
+    checkBoxes.forEach((checkBoxes) => {
+        checkBoxes.addEventListener("change", function (event) {
+            const value = event.target.value;
+
+            if(event.target.checked){
+                if(!selectedValue.includes(value)){
+                    selectedValue.push(value)
+                }
+            }else{
+                const index = selectedValue.indexOf(value);
+                if(index>-1){
+                    selectedValue.splice(index,1);
+                }
+            }
+            console.log(selectedValue);
+            productName.forEach((h1) => {
+                const text = h1.textContent.trim().toLowerCase();
+                const lowerSelected = selectedValue.map(v => v.toLowerCase());
+
+                if(lowerSelected.length === 0 || lowerSelected.some(v => text.includes(v))){
+                    h1.style.display = "block"
+                }else{
+                    h1.style.display = "none"
+                }
+            })
+        })
+    })
+
+    
+
+
+
+</script>

@@ -33,8 +33,6 @@ sideNavBarOverlay.addEventListener("click", function(){
     sideNav.style.left = "-50%"
 
         sideNavBarOverlay.classList.add("hidden");
-
-   
 })
 
 

@@ -30,7 +30,7 @@
     </section>
 
     <!-- Navbar -->
-    <section id="navbar" class="flex justify-between items-center p-4 bg-white ">
+    <section id="navbar" class="flex justify-between items-center p-4 bg-white shadow-sm lg:px-8">
 
         <div class="text-slate-900 text-2xl font-bold">
             <h1>Nostra</h1>
@@ -44,60 +44,60 @@
         </div>
 
         <div class="hidden md:flex gap-10 lg:gap-16 text-slate-900 md:gap-5 ">
-            <a href="index.html" class="hover:underline">Home</a>
+            <a href="index.html" class="hover:underline font-semibold md:text-lg lg:text-lg">Home</a>
             <!-- <a href="#new-arrivals" class="hover:underline" id="newArraivalusBtn">New Arrival</a>
             <a href="#most-Wanted" class="hover:underline">Most Wanted</a> -->
-            <a href="collections.html" class="hover:underline">Collections</a>
-            <a href="" class="hover:underline">Contact Us</a>
+            <a href="collections.html" class="hover:underline font-semibold md:text-lg lg:text-lg">Collections</a>
+            <a href="contact.html" class="hover:underline font-semibold md:text-lg lg:text-lg">Contact Us</a>
         </div>
     </section>
 
     <!-- Side Navbar -->
     <section id="sideNav" class="fixed w-1/3 top-0 left-0 h-screen transition-all duration-700 z-50" style="left:-50%;">
-        <nav class="bg-gray-300 p-3 h-full">
+        <nav class="bg-gray-100 p-3 h-full">
             <!-- Close Button -->
             <div class="text-right ">
                 <p id="closeBtn" class="inline cursor-pointer font-bold text-slate-950 hover:text-red-800">X</p>
             </div>
 
             <ul class="gap-5 text-gray-600 flex flex-col items-start px-2 md:hidden lg:hidden">
-                <li><a class="hover:underline hover:text-black" href="index.html">Home</a></li>
-                <li><a class="hover:underline hover:text-black" href="#new-arrivals">New Arrivals</a></li>
-                <li><a class="hover:underline hover:text-black" href="#most-Wanted">Most Wanted</a></li>
-                <li><a class="hover:underline hover:text-black" href="collections.html">Collections</a></li>
-                <li><a class="hover:underline hover:text-black" href="contact.html">Contact Us</a></li>
+                <li><a class="hover:underline font-semibold hover:text-black" href="index.html">Home</a></li>
+                <!-- <li><a class="hover:underline hover:text-black" href="#new-arrivals">New Arrivals</a></li>
+                <li><a class="hover:underline hover:text-black" href="#most-Wanted">Most Wanted</a></li> -->
+                <li><a class="hover:underline font-semibold hover:text-black" href="collections.html">Collections</a></li>
+                <li><a class="hover:underline font-semibold hover:text-black" href="contact.html">Contact Us</a></li>
             </ul>
         </nav>
     </section>
 
-    <section id="productCollections" class="grid grid-cols-[1fr_0.5fr_3fr] p-4">
+    <section id="productCollections" class="grid grid-cols-[1fr_0.5fr_3fr] p-4 lg:px-8">
         <div id="veraity">
             <div id="occasion">
-                <h1 class="text-xl font-bold text-slate-950">Occasion</h1>
+                <h1 class="text-xl font-bold text-slate-950 md:text-2xl">Occasion</h1>
                 <ul class="flex gap-2 flex-col mt-3">
-                    <li class="text-xs"><input id="summer" value="Summer" name="occasion" type="checkbox"> Summer</li>
-                    <li class="text-xs"><input id="party" value="Party" name="occasion" type="checkbox"> Party</li>
-                    <li class="text-xs"><input id="beach" value="Beach" name="occasion" type="checkbox"> Beach</li>
-                    <li class="text-xs"><input id="beach" value="Beach" name="occasion" type="checkbox"> Merdern</li>
+                    <li class="text-xs md:text-[16px] font-semibold"><input id="summer" value="summer" name="occasion" type="checkbox"> Summer</li>
+                    <li class="text-xs md:text-[16px] font-semibold"><input id="party" value="party" name="occasion" type="checkbox"> Party</li>
+                    <li class="text-xs md:text-[16px] font-semibold"><input id="beach" value="beach" name="occasion" type="checkbox"> Beach</li>
+                    <li class="text-xs md:text-[16px] font-semibold"><input id="modern" value="modern" name="occasion" type="checkbox"> Modern </li>
 
                 </ul>
             </div>
 
             <div class="mt-5">
-                <h1 class="text-xl font-bold text-slate-950">Colors</h1>
+                <h1 class="text-xl font-bold text-slate-950 md:text-2xl">Colors</h1>
                 <ul class="flex gap-2 flex-col mt-3">
-                    <li class="text-xs"><input id="red" value="Red" name="colors" type="checkbox"> Red</li>
-                    <li class="text-xs"><input id="blue" value="Blue" name="colors" type="checkbox"> Blue</li>
-                    <li class="text-xs"><input id="white" value="White" name="colors" type="checkbox"> White</li>
-                    <li class="text-xs"><input id="green" value="Green" name="colors" type="checkbox"> Green</li>
+                    <li class="text-xs md:text-[16px] font-semibold"><input id="red" value="Red" name="colors" type="checkbox"> Red</li>
+                    <li class="text-xs md:text-[16px] font-semibold"><input id="blue" value="Blue" name="colors" type="checkbox"> Blue</li>
+                    <li class="text-xs md:text-[16px] font-semibold"><input id="white" value="White" name="colors" type="checkbox"> White</li>
+                    <li class="text-xs md:text-[16px] font-semibold"><input id="green" value="Green" name="colors" type="checkbox"> Green</li>
                 </ul>
             </div>
 
             <div class="mt-5">
-                <h1 class="text-xl font-bold text-slate-950">Arrivals</h1>
+                <h1 class="text-xl font-bold text-slate-950 md:text-2xl">Arrivals</h1>
                 <ul class="flex gap-2 flex-col mt-3">
-                    <li class="text-xs"><input id="new" value="New" name="arrivals" type="checkbox"> New</li>
-                    <li class="text-xs"><input id="old" value="Old" name="arrivals" type="checkbox"> Old</li>
+                    <li class="text-xs md:text-[16px] font-semibold"><input id="new" value="New" name="arrivals" type="checkbox"> New</li>
+                    <li class="text-xs md:text-[16px] font-semibold"><input id="old" value="Old" name="arrivals" type="checkbox"> Old</li>
                 </ul>
             </div>
         </div>
@@ -109,160 +109,187 @@
         <div id="products">
             <input class="w-full p-1 rounded-xl border border-gray-100 pl-2" type="text" placeholder="Search">
 
-            <div class="grid grid-cols-2 gap-4 md:grid-cols-3 justify-between pt-4 ">
+            <div id="productContainer" class="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4 lg:gap-8 justify-between pt-4 ">
 
-                <div class=" rounded-md overflow-hidden">
+                <div class="  text-sm rounded-md overflow-hidden bg-gray-300 p-2"  data-tags="modern white new party beach ">
                     <!-- Image -->
-                    <div class="h-40 w-full md:h-48 lg:h-72">
-                        <img class="w-full h-full object-cover" src="./images/NewArraivals/3.png" alt="img">
+                    <div class=" h-40 w-full md:w-[150px] lg:w-full md:h-44 lg:h-56 overflow-hidden relative">
+                        <img class=" w-full h-full object-cover hover:scale-110 transform transition duration-300" src="./images/NewArraivals/3.png" alt="img">
                     </div>
-                    <h3 class="text-xs">Mordern Shirt</h3>
-                    <p class="text-[10px]">$1299</p>
+                    <h3 class=" product-name text-xs font-semibold lg:text-sm mt-2">Modern  Shirt</h3>
+                    <p class="text-[14px] font-semibold lg:text-lg">$1299</p>
                 </div>
 
-                <div class="  rounded-md overflow-hidden">
+                <div class="rounded-md overflow-hidden bg-gray-300 p-2 " data-tags="modern blue new jacket party">
                     <!-- Image -->
-                    <div class="h-40 w-full md:h-48 lg:h-72">
-                        <img class="w-full h-full object-cover " src="./images/NewArraivals/1.png" alt="img">
+                    <div class="h-40 w-full md:w-[150px] lg:w-full md:h-44 lg:h-56 overflow-hidden relative">
+                        <img class="w-full h-full object-cover transition-transform duration-300 hover:scale-110" src="./images/NewArraivals/1.png" alt="img">
                     </div>
-                    <h3 class="text-xs">Men Blue Jacket</h3>
-                    <p class="text-[10px]">$1999</p>
+                    <h3  class="product-name text-xs font-semibold lg:text-sm mt-2">Men Blue Jacket</h3>
+                    <p class="text-[14px] font-semibold  lg:text-lg">$1999</p>
                 </div>
 
-                <div class=" rounded-md overflow-hidden">
-                    <!-- Image -->
-                    <div class="h-40 w-full md:h-48 lg:h-72">
-                        <img class="w-full h-full object-cover" src="./images/NewArraivals/2.png" alt="img">
+                <div class=" rounded-md overflow-hidden bg-gray-300 p-2" data-tags="modern blue pant jean baggy party">
+                    <!-- Image --> 
+                    <div class="h-40 w-full md:w-[150px] lg:w-full md:h-44 lg:h-56 overflow-hidden relative">
+                        <img class="w-full h-full object-cover transition-transform duration-300 hover:scale-110" src="./images/NewArraivals/2.png" alt="img">
                     </div>
-                    <h3 class="text-xs">Buggy Blue Jen</h3>
-                    <p class="text-[10px]">$1599</p>
+                    <h3 class="product-name text-xs font-semibold lg:text-sm mt-2">Buggy Blue Jen</h3>
+                    <p class="text-[14px] font-semibold  lg:text-lg">$1599</p>
                 </div>
 
-                <div class="rounded-md overflow-hidden">
+                <div class="rounded-md overflow-hidden bg-gray-300 p-2" data-tags="yellow blue new summer beach">
                     <!-- Image -->
-                    <div class="h-40 w-full md:h-48 lg:h-72">
-                        <img class="w-full h-full object-cover " src="./images/collections/new summer.jpg"
+                    <div class="h-40 w-full md:w-[150px] lg:w-full md:h-44 lg:h-56 overflow-hidden relative">
+                        <img class="w-full h-full object-cover transition-transform duration-300 hover:scale-110 " src="./images/collections/new summer.jpg"
                             alt="img">
                     </div>
-                    <h3 class="text-xs">Yellow Parterned Shirt</h3>
-                    <p class="text-[10px]">$799</p>
+                    <h3 class="product-name text-xs font-semibold lg:text-sm mt-2">Yellow Parterned Shirt</h3>
+                    <p class="text-[14px] font-semibold  lg:text-lg">$799</p>
                 </div>
 
-                <div class="rounded-md overflow-hidden ">
+                <div class="rounded-md overflow-hidden bg-gray-300 p-2" data-tags="old">
                     <!-- Image -->
-                    <div class="h-40 w-full md:h-48 lg:h-72">
-                        <img class="w-full h-full object-cover rounded-xl" src="./images/NewArraivals/4.png"
+                    <div class="h-40 w-full md:w-[150px] lg:w-full md:h-44 lg:h-56 overflow-hidden relative">
+                        <img class="w-full h-full object-cover transition-transform duration-300 hover:scale-110" src="./images/NewArraivals/4.png"
                             alt="img">
                     </div>
-                    <h3 class="text-xs">Morder Drop T-Shirt</h3>
-                    <p class="text-[10px]">$799</p>
+                    <h3 class="product-name text-xs font-semibold lg:text-sm mt-2">Morder Drop T-Shirt</h3>
+                    <p class="text-[14px] font-semibold  lg:text-lg">$799</p>
 
 
                 </div>
 
-                <div class="rounded-md overflow-hidden">
+                <div class="rounded-md overflow-hidden bg-gray-300 p-2" data-tags="old beach summer blue">
                     <!-- Image -->
-                    <div class="h-40 w-full md:h-48 lg:h-72">
-                        <img class="w-full h-full object-cover" src="./images/collections/beachWear.webp"
+                    <div class="h-40 w-full md:w-[150px] lg:w-full md:h-44 lg:h-56 overflow-hidden relative">
+                        <img class="w-full h-full object-cover transition-transform duration-300 hover:scale-110" src="./images/collections/beachWear.webp"
                             alt="img">
                     </div>
-                    <h3 class="text-xs">Blue Beach Shirt</h3>
-                    <p class="text-[10px]">$499</p>
+                    <h3 class="product-name text-xs font-semibold lg:text-sm mt-2">Blue Beach Shirt</h3>
+                    <p class="text-[14px] font-semibold   lg:text-lg">$499</p>
                 </div>
 
-                <div class="rounded-md overflow-hidden">
+                <div class="rounded-md overflow-hidden bg-gray-300 p-2" data-tags="white beach new blue">
                     <!-- Image -->
-                    <div class="h-40 w-full md:h-48 lg:h-72">
-                        <img class="w-full h-full object-cover relative" src="./images/collections/beachWear2.jpg"
+                    <div class="h-40 w-full md:w-[150px] lg:w-full md:h-44 lg:h-56 overflow-hidden relative">
+                        <img class="w-full h-full object-cover transition-transform duration-300 hover:scale-110" src="./images/collections/beachWear2.jpg"
                             alt="img">
                     </div>
-                    <h3 class="text-xs">Helf Sleeve Shirt summer</h3>
-                    <p class="text-[10px]">$899</p>
+                    <h3 class="product-name text-xs font-semibold lg:text-sm mt-2">Helf Sleeve Shirt summer</h3>
+                    <p class="text-[14px] font-semibold   lg:text-lg">$899</p>
                 </div>
 
-                <div class="rounded-md overflow-hidden">
+                <div class="rounded-md overflow-hidden bg-gray-300 p-2 " data-tags="green summer new modern">
                     <!-- Image -->
-                    <div class="h-40 w-full md:h-48 lg:h-72">
-                        <img class="w-full h-full object-cover " src="./images/collections/new.jpg" alt="img">
+                    <div class="h-40 w-full md:w-[150px] lg:w-full md:h-44 lg:h-56 overflow-hidden relative">
+                        <img class="w-full h-full object-cover transition-transform duration-300 hover:scale-110" src="./images/collections/new.jpg" alt="img">
                     </div>
-                    <h3 class="text-xs">Half Sleeve Mardern Shirt</h3>
-                    <p class="text-[10px]">$999</p>
+                    <h3 class="product-name text-xs font-semibold lg:text-sm mt-2">Half Sleeve Mardern Shirt</h3>
+                    <p class="text-[14px] font-semibold  lg:text-lg">$999</p>
                 </div>
 
-                <div class=" rounded-md overflow-hidden">
+                <div class=" rounded-md overflow-hidden bg-gray-300 p-2 " data-tags="new party modern">
                     <!-- Image -->
-                    <div class="h-40 w-full md:h-48 lg:h-72">
-                        <img class="w-full h-full object-cover" src="./images/collections/others.webp"
+                    <div class="h-40 w-full md:w-[150px] lg:w-full md:h-44 lg:h-56 overflow-hidden relative">
+                        <img class="w-full h-full object-cover transition-transform duration-300 hover:scale-110" src="./images/collections/others.webp"
                             alt="img">
                     </div>
-                    <h3 class="text-xs">Party Shirt</h3>
-                    <p class="text-[10px]">$899</p>
+                    <h3 class="product-name text-xs font-semibold lg:text-sm mt-2">Party Shirt</h3>
+                    <p class="text-[14px] font-semibold  lg:text-lg">$899</p>
                 </div>
 
-                <div class="rounded-md overflow-hidden">
+                <div class="rounded-md overflow-hidden bg-gray-300 p-2 " data-tags="red blue old party">
                     <!-- Image -->
-                    <div class="h-40 w-full md:h-48 lg:h-72">
-                        <img class="w-full h-full object-cover" src="./images/collections/old.jpg" alt="img">
+                    <div class="h-40 w-full md:w-[150px] lg:w-full md:h-44 lg:h-56 overflow-hidden relative">
+                        <img class="w-full h-full object-cover transition-transform duration-300 hover:scale-110" src="./images/collections/old.jpg" alt="img">
                     </div>
-                    <h3 class="text-xs">Old Clasic Shirt</h3>
-                    <p class="text-[10px]">$1199</p>
+                    <h3 class="product-name text-xs font-semibold lg:text-sm mt-2">Old Clasic Shirt</h3>
+                    <p class="text-[14px] font-semibold  lg:text-lg">$1199</p>
                 </div>
 
-                <div class="rounded-md overflow-hidden">
+                <div class="rounded-md overflow-hidden bg-gray-300 p-2 " data-tags="summer old yellow">
                     <!-- Image -->
-                    <div class="h-40 w-full md:h-48 lg:h-72">
-                        <img class="w-full h-full object-cover" src="./images/collections/summer.jpg"
+                    <div class="h-40 w-full md:w-[150px] lg:w-full md:h-44 lg:h-56 overflow-hidden relative">
+                        <img class="w-full h-full object-cover transition-transform duration-300 hover:scale-110" src="./images/collections/summer.jpg"
                             alt="img">
                     </div>
-                    <h3 class="text-xs">Yellow Printted Shirt</h3>
-                    <p class="text-[10px]">$699</p>
+                    <h3 class="product-name text-xs font-semibold lg:text-sm mt-2">Yellow Printted Shirt</h3>
+                    <p class="text-[14px] font-semibold  lg:text-lg">$699</p>
                 </div>
 
-                <div class="rounded-md overflow-hidden">
+                <div class="rounded-md overflow-hidden bg-gray-300 p-2 " data-tags="new beach summer">
                     <!-- Image -->
-                    <div class="h-40 w-full md:h-48 lg:h-72">
-                        <img class="w-full h-full object-cover" src="./images/collections/others1.jpg"
+                    <div class="h-40 w-full md:w-[150px] lg:w-full md:h-44 lg:h-56 overflow-hidden relative">
+                        <img class="w-full h-full object-cover transition-transform duration-300 hover:scale-110" src="./images/collections/others1.jpg"
                             alt="img">
                     </div>
-                    <h3 class="text-xs">Trendy Kurta</h3>
-                    <p class="text-[10px]">$899</p>
+                    <h3 class="product-name text-xs font-semibold lg:text-sm mt-2">Trendy Kurta</h3>
+                    <p class="text-[14px] font-semibold  lg:text-lg">$899</p>
                 </div>
 
-                <div class="rounded-md overflow-hidden">
+                <div class="rounded-md overflow-hidden bg-gray-300 p-2 " data-tags="green white beach old">
                     <!-- Image -->
-                    <div class="h-40 w-full md:h-48 lg:h-72">
-                        <img class="w-full h-full object-cover" src="./images/collections/summerWare.jpg"
-                            alt="img">
-                    </div>
-
-                    <h3 class="text-xs">Summer Half-Sleeve Shirt</h3>
-                    <p class="text-[10px]">$699</p>
-                </div>
-
-                <div class="rounded-md overflow-hidden">
-                    <!-- Image -->
-                    <div class="h-40 w-full md:h-48 lg:h-72">
-                        <img class="w-full h-full object-cover" src="./images/collections/SummerWear.jpg"
+                    <div class="h-40 w-full md:w-[150px] lg:w-full md:h-44 lg:h-56 overflow-hidden relative">
+                        <img class="w-full h-full object-cover transition-transform duration-300 hover:scale-110" src="./images/collections/summerWare.jpg"
                             alt="img">
                     </div>
 
-                    <h3 class="text-xs">Summer Green</h3>
-                    <p class="text-[10px]">$1399</p>
+                    <h3 class="product-name text-xs font-semibold lg:text-sm mt-2">Summer Half-Sleeve Shirt</h3>
+                    <p class="text-[14px] font-semibold  lg:text-lg">$699</p>
                 </div>
 
-                <div class="rounded-md overflow-hidden">
+                <div class="rounded-md overflow-hidden bg-gray-300 p-2 " data-tags="beach old green">
                     <!-- Image -->
-                    <div class="h-40 w-full md:h-48 lg:h-72">
-                        <img class="w-full h-full object-cover" src="./images/collections/party Floral.jpg"
+                    <div class="h-40 w-full md:w-[150px] lg:w-full md:h-44 lg:h-56 overflow-hidden relative">
+                        <img class="w-full h-full object-cover transition-transform duration-300 hover:scale-110" src="./images/collections/SummerWear.jpg"
                             alt="img">
                     </div>
 
-                    <h3 class="text-xs">Party Floral Shirt</h3>
-                    <p class="text-[10px]">$2999</p>
+                    <h3 class="product-name text-xs font-semibold lg:text-sm mt-2">Summer Green</h3>
+                    <p class="text-[14px] font-semibold  lg:text-lg">$1399</p>
+                </div>
+
+                <div class="rounded-md overflow-hidden bg-gray-300 p-2 " data-tags="yellow red beach summer">
+                    <!-- Image -->
+                    <div class="h-40 w-full md:w-[150px] lg:w-full md:h-44 lg:h-56 overflow-hidden relative">
+                        <img class="w-full h-full object-cover transition-transform duration-300 hover:scale-110" src="./images/collections/party Floral.jpg"
+                            alt="img">
+                    </div>
+
+                    <h3 class="product-name text-xs font-semibold lg:text-sm mt-2">Party Floral Shirt</h3>
+                    <p class="text-[14px] font-semibold  lg:text-lg">$2999</p>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- footer -->
+
+    <footer class="bg-gray-900 text-white px-6 py-8">
+        <div class=" mx-auto space-y-4">
+            <!-- Logo & Description -->
+            <div>
+                <h2 class="text-2xl font-bold">Nostra</h2>
+                <p class="text-sm text-gray-300">
+                    The Standard chunk of Lorem ipsum used since the 1500s is reproduced below for those interest
+                </p>
+            </div>
+
+            <!-- Social Media Icons -->
+            <div class="flex gap-4 text-xl">
+                <a href="#" class="hover:text-blue-500"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="hover:text-blue-500"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="hover:text-blue-500"><i class="fab fa-facebook-f"></i></a>
+            </div>
+
+            <!-- Copyright -->
+            <p class="text-sm text-gray-400">@ 2025 Nostra.com</p>
+        </div>
+    </footer>
+
+    <div id="sideNavBarOverlay" class="hidden fixed inset-0 bg-black bg-opacity-30  transition-all duration-300 pointer-events-auto" style="z-index: 41;" ></div> 
+
 
     
 </body>
